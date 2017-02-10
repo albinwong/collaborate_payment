@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<block name="title"><title>直销商城</title></block>
+<meta name="viewport" content="width=divice-width minimum-scale=1.0 maximum-scale=1.0 user-scalable=no"/>
+<link href="__PUBLIC__/home/css/layer.css" type="text/css" rel="stylesheet">
+<link href="__PUBLIC__/home/css/order.css" type="text/css" rel="stylesheet">
+<link href="__PUBLIC__/home/css/swiper-3.4.1.min.css" type="text/css" rel="stylesheet">
+<link href="__PUBLIC__/home/css/weui.css" type="text/css" rel="stylesheet">
+<link href="__PUBLIC__/home/css/common.css" type="text/css" rel="stylesheet">
+<link href="__PUBLIC__/home/css/style/throughsetting.css" type="text/css" rel="stylesheet">
+<link href="__PUBLIC__/home/css/style/index.css" type="text/css" rel="stylesheet">
+<script src="__PUBLIC__/home/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="__PUBLIC__/home/js/swiper-3.4.1.min.js" type="text/javascript"></script>
+<script src="__PUBLIC__/home/js/layer.js" type="text/javascript"></script>
+<script src="__PUBLIC__/home/js/order.js" type="text/javascript"></script>
+</head>
+<body>
+    <block name="header">
+        <header>
+            <div class="pull-left" onclick="window.history.back()">
+            <img class="icon-rotate fa fa-rotate-left" src="__PUBLIC__/home/img/Arrow.png"/>
+            </div>
+            <div class="shuaxin" onclick="window.history.go(0)">
+                <img class="icon-rotate fa fa-rotate-left" src="__PUBLIC__/home/img/new.png"/>
+            </div>
+            <div class="login-title"><block name="tit">合作缴费</block></div>
+        </header>
+    </block>
+    <div class="weui_tab">
+        <block name="content">
+            <a href="__MODULE__/index/manger/" class="weui_btn weui_btn_default" style="margin-top:80px;"><img src="__PUBLIC__/home/img/hmtb.png"/></a>
+            <a href="__MODULE__/direct/index" class="weui_btn weui_btn_default"><img src="__PUBLIC__/home/img/zxsc.png"/></a>
+            <a href="__MODULE__/" class="weui_btn weui_btn_default"><img src="__PUBLIC__/home/img/jfsc.png"/></a>
+            <a href="__MODULE__/" class="weui_btn weui_btn_default"><img src="__PUBLIC__/home/img/bxcs.png"/></a>
+            <a href="__MODULE__/" class="weui_btn weui_btn_default"><img src="__PUBLIC__/home/img/zszx.png"/></a>
+        </block>
+        <block name="footer"></block>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*pay*/
+.pay{ width:90%; padding:0px 5%; text-align:center; font-size:1.2rem; margin:26px auto;}
+.pay span{ font-size:1.5rem; color:#c90909;}
+.weui_cell_bd img{ width:100px; height:38px; margin-top:3px;}
+.add{ background:#c90909; width:88%; margin:0px 6%;}
+.add input{ background:#c90909; border:none; font-size:1.2rem; color:#FFF;}
+/*pay end*/
+
+/*pay2*/
+.xzpp{ width:90%; line-height:30px; margin:18px 5%; font-size:0.9rem;}
+.xzpp select{ width:38%; height:30px; overflow:hidden; background:#55a276; color:#FFF;}
+.xzqy{ width:90%; margin:10px 5%; font-size:0.9rem; line-height:30px;}
+.xzqy select{background:#55a276; height:30px; overflow:hidden; color:#FFF;text-align:center;}
+.select-sheng{ width:29%;}
+.select-shi{ width:20%;}
+.select-qu{ width:20%;}
+
+.inquiry{ width:90%; margin:10px 5%; font-size:0.9rem;}
+.quiry{ width:100%; height:30px; margin-bottom:10px;}
+.quiry_1{ width:22%; float:left; line-height:30px; background:#55a276; color:#FFF; font-weight:bold; font-size:1.1rem;
+ text-align:center; border-radius:6px;}
+.quiry_2{ display:none; width:63%; line-height:30px;  float:left; text-align:right; margin-left:15%;}
+.quiry_2 span{ color:#f8d305; font-size:1.3rem;}
+.sheet{ width:100%; background:#55a276; color:#FFF; overflow:hidden;}
+.sheet th{ height:35px; line-height:35px; overflow:hidden;}
+.sheet td{ height:26px; line-height:26px; text-align:center; overflow:hidden;}
+.sheet_1{ width:16%;}
+.sheet_2{ width:33%;}
+.sheet_3{ width:20%;}
+.sheet_4{ width:31%;}
+
+.subordinate{ width:90%; margin:10px 5%; font-size:0.8rem; height:30px; line-height:30px;}
+.subordinate p{ float:left;}
+.insubo{ width:68%; text-align:center; background:#55a276; color:#FFF;}
+.choose input{ margin-left:8%; width:25px; height:25px;}
+.choose{ width:90%; margin:10px 5%; font-size:0.8rem; line-height:30px; height:30px;}
+.choose p{ float:left;}
+.weui_btn{ background:#c90909; width:86%; margin:38px 7%;}
+/*pay2 end*/
+
+.payend{ width:60%; margin:28px 20%;}
+.payend img{ width:100%;}
+
+/*zhuanzhang*/
+.beizhu{ width:90%; margin:0px 5%; margin-top:50px; text-align:center; font-size:0.7rem; color:#666;}
+
+/*zhuanzhang end*/
+

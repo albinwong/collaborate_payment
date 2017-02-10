@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0px; padding:0px; list-style-type:none;}
+body{ font-family:"微软雅黑","宋体"; color:#333; font-size:1.2rem;}
+img,a{ border:none;}
+a{ display:block; text-decoration:none;}
+
+
+header{ width:100%; height:60px; background:#55a276; position:fixed; top:opx; z-index:2;}
+header img{width:30px;height:30px; float:left; margin:15px 2%;}
+.login-title{ text-align:center; line-height:60px; color:#FFF;}
+.shuaxin{float:right; margin:0px 3%;}
+-webkit-box-shadow-header{ width:100%; height:60px; background:#55a276; position:fixed; top:opx; z-index:2;}
+
+
+-moz-box-shadow-header{ width:100%; height:60px; background:#55a276; position:fixed; top:opx; z-index:2;}

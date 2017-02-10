@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+article, aside, details, figcaption, figure, footer, header, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+*{-webkit-tap-highlight-color:rgba(255,255,255,0)}
+html,body{ height:100%;}
+html {overflow-y: scroll;}
+body.wbg{ background: #fff;}
+/**
+ * 1. 防止元素中「font-family」不能继承
+ * 2. 西文字体和 OS X 字体写在前面
+ * 3. Opera 12.1 之前版本不支持中文字体的英文名称
+ * 4. 微软雅黑「\5FAE\8F6F\96C5\9ED1」,中易宋体「\5B8B\4F53」
+ */
+body,
+button, /* 1 */
+input, /* 1 */
+select, /* 1 */
+textarea  /* 1 */
+{
+  font-family: "Helvetica Neue","Helvetica","SimHei","Microsoft YaHei","WenQuanYi Micro Hei","Hiragino Sans GB",Simsun,Arial,sans-serif;
+ /*font-family: 'helvetica neue',arial,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;*/
+}
+/*模拟滑动*/
+td,th,caption { font-size:14px; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+a { color:#555; text-decoration:none; }
+img { border:none; margin: 0 0 0 0; padding: 0 0 0 0; }
+ol,ul,li { list-style:none; }
+input, textarea, select, button { font-size:14px; }
+table { border-collapse:collapse; }
+/* css common */
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix { *zoom:1; }
+/*去除input自动填充时的背景色*/
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { -webkit-box-shadow: 0 0 0 1000px #11c5d1 inset;}
+input[type=checkbox]:focus, input[type=file]:focus, input[type=radio]:focus{outline: none !important;}
+input,textarea,select,label{outline: none;-moz-box-sizing: border-box; -webkit-box-sizing:border-box; box-sizing: border-box;font-size-adjust:none; font-stretch:normal; -webkit-tap-highlight-color:rgba(0,0,0,0);   -moz-appearance: none;  -ms-appearance: none;  -o-appearance: none;  appearance: none; outline:none; }
+input,select{ background: transparent; border: none; font-family: 'helvetica neue',arial,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;}
+input[type="submit"],input[type="button"]{-webkit-appearance: none;}
+/*去掉苹果的默认UI来渲染按钮*/
+input[type="submit"], input[type="reset"], input[type="button"], button { -webkit-appearance: none; }
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px #fff inset;}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder,textarea{ font-family: 'helvetica neue',arial,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif !important; font-size: 13px; color: #999;}
