@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <title>合作缴费</title>
-<meta name="viewport" content="width=divice-width minimum-scale=1.0 maximum-scale=1.0 user-scalable=no"/>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
 <link href="/work/pay_center/Public/home/css/layer.css" type="text/css" rel="stylesheet">
 <link href="/work/pay_center/Public/home/css/order.css" type="text/css" rel="stylesheet">
 <link href="/work/pay_center/Public/home/css/swiper-3.4.1.min.css" type="text/css" rel="stylesheet">
@@ -30,11 +30,11 @@
 
     <div class="weui_tab">
         
-    <a href="/work/pay_center/index.php/Home/index/manger/" class="weui_btn weui_btn_default" style="margin-top:80px;"><img src="/work/pay_center/Public/home/img/hmtb.png"/></a>
+    <a href="/work/pay_center/index.php/Home/main/index" class="weui_btn weui_btn_default" style="margin-top:80px;"><img src="/work/pay_center/Public/home/img/hmtb.png"/></a>
     <a href="/work/pay_center/index.php/Home/direct/index" class="weui_btn weui_btn_default"><img src="/work/pay_center/Public/home/img/zxsc.png"/></a>
-    <a href="/work/pay_center/index.php/Home/" class="weui_btn weui_btn_default"><img src="/work/pay_center/Public/home/img/jfsc.png"/></a>
-    <a href="/work/pay_center/index.php/Home/" class="weui_btn weui_btn_default"><img src="/work/pay_center/Public/home/img/bxcs.png"/></a>
-    <a href="/work/pay_center/index.php/Home/" class="weui_btn weui_btn_default"><img src="/work/pay_center/Public/home/img/zszx.png"/></a>
+    <a href="/work/pay_center/index.php/Home/inte/index" class="weui_btn weui_btn_default"><img src="/work/pay_center/Public/home/img/jfsc.png"/></a>
+    <a href="/work/pay_center/index.php/Home/insurance/index" class="weui_btn weui_btn_default"><img src="/work/pay_center/Public/home/img/bxcs.png"/></a>
+    <a href="/work/pay_center/index.php/Home/index/info/" class="weui_btn weui_btn_default"><img src="/work/pay_center/Public/home/img/zszx.png"/></a>
 
         
     </div>

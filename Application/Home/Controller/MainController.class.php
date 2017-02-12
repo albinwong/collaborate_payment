@@ -1,7 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class DirectController extends Controller {
+class MainController extends Controller {
     public function index(){
         $this->display();
     }
@@ -18,30 +18,25 @@ class DirectController extends Controller {
     public function info(){
     	$merchants = M('merchants');
     	$mlists = $merchants -> field('mid,intro,name') -> select();
-        $brand = M("direct_brand")->select();
+        // dump($mlists);exit;
     	$this->assign('mc',$mlists);
-        $this->assign('sf',$_SESSION['pay']['identify']);
-    	$this->assign('bd',$brand);
+    	$this->assign('sf',$_SESSION['pay']['identify']);
     	$this->display();
+    }
+
+    public function address(){
+        $addr = M('area');
+        $address = $addr->where('parentid='.$_GET['pid'])->order('areaid asc')->select();
+        echo json_encode($address);
     }
 
     public function settlement(){
         if(IS_POST){
-            if($_SESSION['pay']["identify"] != 1){
-                $hui['mc_id'] = $_POST['mc_id'];
-                $hui['prov'] = $_POST['hprov'];
-                $hui['city'] = $_POST['hcity'];
-                $hui['area'] = $_POST['harea'];
-                $hui['pay_type'] = '直销商城';
-                unset($_POST['hprov']);
-                unset($_POST['hcity']);
-                unset($_POST['harea']);
-                $_SESSION['pay']['hui'] = $hui;
-            }
             foreach($_POST as $k=>$v){
                 $_SESSION['pay'][$k] = $v;
             }
             // dump($_SESSION['pay']);exit;
+            $this->assign('tp',$_SESSION['pay']["identify"]);
             $this->assign('figure',$_SESSION['pay']["figure"]);
             $this->display();
         }else{
@@ -51,10 +46,6 @@ class DirectController extends Controller {
 
     public function addOrder(){
         if(IS_POST){
-            if($_SESSION['pay']['hui']){
-                $give = $_SESSION['pay']['hui'];
-            }
-            unset($_SESSION['pay']['hui']);
             foreach($_SESSION['pay'] as $k=>$v){
                 $data[$k] = $v;
             }
@@ -62,13 +53,8 @@ class DirectController extends Controller {
             $data['user'] = 1;//用户的ID
             $data['status'] = 1;//未付款
             $data['oid'] = date('YmdHis').rand(1000,9999); 
-            $order = M("direct_order");
+            $order = M("agent_order");
             $res = $order->add($data);
-            if($res && $give){
-                $oid = $order->field('oid')->where('id',$res)->find();
-                $give['oid'] = $oid['oid'];
-                $hmt = M('agent_order')->add($give);
-            }
             if($res){
                 if($_POST['pay_type'] == '支付宝'){
                     redirect(U('Home/Pay/alipay'), 1, '页面跳转中...');
@@ -82,6 +68,5 @@ class DirectController extends Controller {
             header("location:".$_SERVER['HTTP_REFERER']);
         }
     }
-
 
 }

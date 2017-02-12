@@ -1,0 +1,24 @@
+<extend name="layout/home" />
+<block name="title"><title>合作缴费</title></block>
+<block name="tit">积分商城<span>（合伙人）</span></block>
+<block name="content">
+    <link href="__PUBLIC__/home/css/style/pay.css" type="text/css" rel="stylesheet">
+    <script src="__PUBLIC__/home/js/js/pay.js" type="text/javascript"></script>
+<div class="weui_tab" style="background:#FFF;">
+    <div class="weui_tab_bd">
+        <form action="__MODULE__/inte/rec" method="post">
+        <div class="weui_tab_bd" style="margin-top:60px; margin-bottom:80px;">
+            <div class="subordinate">
+                <p>所属招商中心：</p>
+                <select class="insubo" name="mc_id">
+                    <foreach  name="mc" item="mlist">
+                        <option value="{$mlist.mid}">{$mlist.name}</option>
+                    </foreach>
+                </select>
+            </div>
+            <input class="weui_btn weui_btn_warn" style="width:80%;text-align:center;" value="确认" type="submit">
+        </div>
+    </form>
+</div>
+</div>
+</block>

@@ -43,6 +43,7 @@ input,textarea,select,label{outline: none;-moz-box-sizing: border-box; -webkit-b
 input,select{ background: transparent; border: none; font-family: 'helvetica neue',arial,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;}
 input[type="submit"],input[type="button"]{-webkit-appearance: none;}
 /*去掉苹果的默认UI来渲染按钮*/
-input[type="submit"], input[type="reset"], input[type="button"], button { -webkit-appearance: none; }
+/*input[type="submit"], input[type="reset"], input[type="button"], button { -webkit-appearance: none; }
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px #fff inset;}
 input::-webkit-input-placeholder,textarea::-webkit-input-placeholder,textarea{ font-family: 'helvetica neue',arial,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif !important; font-size: 13px; color: #999;}
+*/

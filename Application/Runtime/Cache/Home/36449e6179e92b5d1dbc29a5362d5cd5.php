@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>汇盟通宝</title>
+<title>合作缴费</title>
 <meta name="viewport" content="width=divice-width minimum-scale=1.0 maximum-scale=1.0 user-scalable=no"/>
 <link href="/work/pay_center/Public/home/css/layer.css" type="text/css" rel="stylesheet">
 <link href="/work/pay_center/Public/home/css/order.css" type="text/css" rel="stylesheet">
@@ -25,7 +25,7 @@
             <div class="shuaxin" onclick="window.history.go(0)">
                 <img class="icon-rotate fa fa-rotate-left" src="/work/pay_center/Public/home/img/new.png"/>
             </div>
-            <div class="login-title">汇盟通宝</div>
+            <div class="login-title">积分商城<span>（合伙人）</span></div>
         </header>
     
     <div class="weui_tab">
@@ -33,26 +33,21 @@
 <link href="/work/pay_center/Public/home/css/style/manager.css" type="text/css" rel="stylesheet">
 <script src="/work/pay_center/Public/home/js/js/manager.js" language="javascript"></script>
     <div class="weui_navbar" style="position:fixed; top:60px;">
-        <div class="weui_navbar_item weui_bar_item_on">代理商</div>
-        <div class="weui_navbar_item">合伙人</div>
-        <div class="weui_navbar_item">服务中心</div>
-        <div class="weui_navbar_item">运营中心</div>
+        <div class="weui_navbar_item weui_bar_item_on">分红股东</div>
+        <div class="weui_navbar_item">股东代表</div>
+        <div class="weui_navbar_item">董事监事</div>
     </div>
     <div class="weui_tab_bd" style="margin-top:60px; margin-bottom:130px;">
     	<div class="inweui_tab_bd" style="margin-top:15px;">
-                <p style="color:#c90909;">1、享受高达4950元的现金奖励政策：推荐联盟商家奖励198元，限25个</p>
-                <p>2、代理商20%，合伙人16%，服务中心12%，运营中心8%</p>
-                <p>3、代理商5%，合伙人4%,  服务中心3%，运营中心2%</p>
-                <p>4、奖励直推联盟商家折扣的20%</p>
-                <p>5、奖励直推代理商联盟商家团队折扣的2%</p>
-                <p>6、奖励间推代理商商家团队折扣的1%</p>
-                <p>7、奖励直推会员消费折扣的5%和间推会员消费折扣的5%</p>
-                <p>8、奖励直推代理商会员团队折扣的2%</p>
-                <p>9、奖励间推代理商会员团队折扣的1%</p>
-                <p>10、配送手机刷卡器5个+N个：享受刷卡收益的70%</p>
-                <p>11、配送扫码支付20个+20张实卡：享受刷卡收益的70%</p>
-                <p>12、协助公司招手机刷卡器和扫码支付的代理商：补贴7%</p>
-                <p>13、通宝贷：可以申请3万~100万的无抵押用贷款</p>
+            <h3>合伙人</h3>
+            	<ul>
+                	<li>免费做公司合伙人·只需交保证金24750元</li>
+                    <li>配送6个价值4950元的代理商名额</li>
+                    <li>合伙人为区县服务中心董事或监事</li>
+                    <li>参与公司决策/li>
+                    <li>并享有公司3%分红权</li>
+                    <li>每个区县服务中心限9个名额，先到先得！</li>
+                </ul>
         </div>
         <div class="inweui_tab_bd">
         	<h3>合伙人</h3>
@@ -76,61 +71,27 @@
                 <li style="color:#c90909;">可以申请成为招商中心，享受招商5大收益</li>
             </ul>
         </div>
-        <div class="inweui_tab_bd">
-        	<h3>市级运营中心</h3>
-            <ul>
-            	<li>收益：区域内联盟商家折扣的10%</li>
-                <li>举例：区域内有1000个联盟商家，每个联盟商家每月会员消费营业额为2万元，1000个*2万*9.5折*10% = 10万/月</li>
-                <li>市级运营中心代理费40万</li>
-                <li>市级运营中心为省级控股公司的董事或监事</li>
-                <li>参与公司决策，并享有公司1%分红股权</li>
-                <li style="color:#c90909;">市级运营中心同时也是招商中心，享受招商中心的5大收益</li>
-            </ul>
-            <h3>招商中心5大收益</h3>
-            <div class="managers">
-            	<p>1.招商补贴：协助推荐代理商7%（346.5元），合伙人6%（1485元），服务中心5%（4950元），运营中心4%（1.6万）</p>
-            </div>
-            <div class="managers">
-            	<p>2.奖励代理商团队商家折扣的2%：例：招50个代理商，每个代理商直推25个联盟商家，50个代理商×25个商家×2万/月×折扣（9.5折）×2% = 2.5万元/月</p>
-            </div>
-            <div class="managers">
-            	<p>3.奖励代理商团队会员消费折扣的1%：例：招50个代理商，50个×25个×66人×1000元/月×9.5折×1% = 4.125万元/月</p>
-            </div>
-            <div class="managers">
-            	<p>4.奖励代理商团队卡头刷卡收益的7%；例：招50个代理商，每个代理商安装50个，每个刷卡头每月刷2万，月收入约4000元；</p>
-            </div>
-            <div class="managers">
-            	<p>5.奖励代理商团队扫码支付刷卡收益的7%；例：招50个代理商，每个代理商安装100个，每个用户每月刷1万，月收入约4000元；</p>
-            </div>
-        </div>
     </div>
 
         
-    <form action="/work/pay_center/index.php/Home/Index/test" method="post">
+    <form action="/work/pay_center/index.php/Home/Inte/check" method="post">
         <div class="weui_tabbar">
-        	<div class="inweui_tabbar">
-                <div class="keynote_2">
-                	<p>配送4950元创投基金</p>
-                	<p>仅限于抵扣汇盟通宝区县服务中心和市级运营中心代理费</p>
+            <div class="inweui_tabbar">
+                <p class="keynote_1">市级服务商必须是汇盟通宝的合伙人</p>
+            	<div class="keynote_2">
+                	<p>前<span class="biandong">160</span>名可成为直销商城股东</p>
+                    <p>配送直销商城事业部0.1%股权</p>
                 </div>
-                <div class="payment">保证金<span class="fee">4950</span>元</div>
+                <div class="payment">代理费<span class="fee">24750</span>元</div>
                 <a>
                     <input type="submit" class="weui_btn weui_btn_primary" value="点击缴费" style="background:#c90909; width:100%;"/>
                 </a>
             </div>
             <div class="inweui_tabbar">
+                <p class="keynote_1">省级服务商必须是汇盟通宝区县服务中心</p>
                 <div class="keynote_2">
-                	<p>配送9900元创投基金</p>
-                	<p>仅限于抵扣汇盟通宝区县服务中心和市级运营中心代理费</p>
-                </div>
-                <div class="payment">保证金<span class="fee">24750</span>元</div>
-                <a>
-                    <input type="submit" class="weui_btn weui_btn_primary" value="点击缴费" style="background:#c90909; width:100%;"/>
-                </a>
-            </div>
-            <div class="inweui_tabbar">
-                <div class="keynote_2">
-                	<p>仅还有<span class="biandong">32</span>名可享受8折优惠方案，先到先得</p>
+                	<p>前<span class="biandong">32</span>名可成为直销商城股东代表</p>
+                    <p>配送直销商城事业部0.5%股权</p>
                 </div>
                 <div class="payment">代理费<span class="fee">99000</span>元</div>
                 <a>
@@ -140,7 +101,8 @@
             <div class="inweui_tabbar">
                 <p class="keynote_1">全国服务商必须是汇盟通宝市级运营中心</p>
                 <div class="keynote_2">
-                	<p>仅还有<span class="biandong">8</span>名可享受8折优惠方案，先到先得</p>
+                	<p>前<span class="biandong">8</span>名可成为直销商城董事或监事参与管理</p>
+                    <p>配送直销商城事业部2%股权</p>
                 </div>
                 <div class="payment">代理费<span class="fee">396000</span>元</div>
                 <a>
@@ -148,7 +110,7 @@
                 </a>
             </div>
         </div>
-        <input type="hidden" name="type" value="hmtb">
+        <input type="hidden" name="type" value="jfsc">
         <input type="hidden" name="identify">
         <input type="hidden" name="figure">
     </form>

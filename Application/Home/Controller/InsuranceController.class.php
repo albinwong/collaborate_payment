@@ -1,28 +1,28 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class DirectController extends Controller {
+class InsuranceController extends Controller {
     public function index(){
         $this->display();
     }
 
     public function check(){
-    	if(IS_POST){
-    		$_SESSION['pay'] = $_POST;
-    		$this->redirect('info');
-    	}else{
-    		header("location:".$_SERVER['HTTP_REFERER']);
-    	}
+        if(IS_POST){
+            $_SESSION['pay'] = $_POST;
+            $this->redirect('info');
+        }else{
+            header("location:".$_SERVER['HTTP_REFERER']);
+        }
     }
 
     public function info(){
-    	$merchants = M('merchants');
-    	$mlists = $merchants -> field('mid,intro,name') -> select();
-        $brand = M("direct_brand")->select();
-    	$this->assign('mc',$mlists);
+        $merchants = M('merchants');
+        $mlists = $merchants -> field('mid,intro,name') -> select();
+        $brand = M("insurance_brand")->select();
+        $this->assign('mc',$mlists);
         $this->assign('sf',$_SESSION['pay']['identify']);
-    	$this->assign('bd',$brand);
-    	$this->display();
+        $this->assign('bd',$brand);
+        $this->display();
     }
 
     public function settlement(){
@@ -32,7 +32,7 @@ class DirectController extends Controller {
                 $hui['prov'] = $_POST['hprov'];
                 $hui['city'] = $_POST['hcity'];
                 $hui['area'] = $_POST['harea'];
-                $hui['pay_type'] = '直销商城';
+                $hui['pay_type'] = '保险超市';
                 unset($_POST['hprov']);
                 unset($_POST['hcity']);
                 unset($_POST['harea']);
@@ -62,8 +62,9 @@ class DirectController extends Controller {
             $data['user'] = 1;//用户的ID
             $data['status'] = 1;//未付款
             $data['oid'] = date('YmdHis').rand(1000,9999); 
-            $order = M("direct_order");
+            $order = M("insur_order");
             $res = $order->add($data);
+            // dump($res);exit;
             if($res && $give){
                 $oid = $order->field('oid')->where('id',$res)->find();
                 $give['oid'] = $oid['oid'];

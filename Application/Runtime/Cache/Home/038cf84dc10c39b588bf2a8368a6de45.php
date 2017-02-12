@@ -1,8 +1,36 @@
-<extend name="layout/home" />
-<block name="title"><title>合作缴费</title></block>
-<block name="tit">直销商城<span>（服务商）</span></block>
-<block name="content">
-<link href="__PUBLIC__/home/css/style/manager.css" type="text/css" rel="stylesheet">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>合作缴费</title>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+<link href="/work/pay_center/Public/home/css/layer.css" type="text/css" rel="stylesheet">
+<link href="/work/pay_center/Public/home/css/order.css" type="text/css" rel="stylesheet">
+<link href="/work/pay_center/Public/home/css/swiper-3.4.1.min.css" type="text/css" rel="stylesheet">
+<link href="/work/pay_center/Public/home/css/weui.css" type="text/css" rel="stylesheet">
+<link href="/work/pay_center/Public/home/css/common.css" type="text/css" rel="stylesheet">
+<link href="/work/pay_center/Public/home/css/style/throughsetting.css" type="text/css" rel="stylesheet">
+<link href="/work/pay_center/Public/home/css/style/index.css" type="text/css" rel="stylesheet">
+<script src="/work/pay_center/Public/home/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="/work/pay_center/Public/home/js/swiper-3.4.1.min.js" type="text/javascript"></script>
+<script src="/work/pay_center/Public/home/js/layer.js" type="text/javascript"></script>
+<script src="/work/pay_center/Public/home/js/order.js" type="text/javascript"></script>
+</head>
+<body>
+    
+        <header>
+            <div class="pull-left" onclick="window.history.back()">
+            <img class="icon-rotate fa fa-rotate-left" src="/work/pay_center/Public/home/img/Arrow.png"/>
+            </div>
+            <div class="shuaxin" onclick="window.history.go(0)">
+                <img class="icon-rotate fa fa-rotate-left" src="/work/pay_center/Public/home/img/new.png"/>
+            </div>
+            <div class="login-title">保险超市<span>（服务商）</span></div>
+        </header>
+    
+    <div class="weui_tab">
+        
+<link href="/work/pay_center/Public/home/css/style/manager.css" type="text/css" rel="stylesheet">
     <div class="weui_navbar" style="position:fixed; top:60px;">
         <div class="weui_navbar_item weui_bar_item_on">区县</div>
         <div class="weui_navbar_item">市级</div>
@@ -78,9 +106,9 @@
             </div>
         </div>
     </div>
-</block>
-<block name="footer">
-    <form action="__URL__/check" method="post">
+
+        
+    <form action="/work/pay_center/index.php/Home/Insurance/check" method="post">
         <div class="weui_tabbar">
         	<div class="inweui_tabbar">
                 <div class="keynote_2">
@@ -92,10 +120,10 @@
                 </a>
             </div>
             <div class="inweui_tabbar">
-                <p class="keynote_1">直销商城的市级服务商必须是汇盟通宝的合伙人</p>
+                <p class="keynote_1">保险超市的市级服务商必须是汇盟通宝的合伙人</p>
             	<div class="keynote_2">
-                	<p>前<span class="biandong">160</span>名可成为直销商城股东</p>
-                    <p>配送直销商城事业部0.1%股权</p>
+                	<p>前<span class="biandong">160</span>名可成为保险超市股东</p>
+                    <p>配送保险超市事业部0.1%股权</p>
                 </div>
                 <div class="payment">代理费<span class="fee">24750</span>元</div>
                 <a>
@@ -103,10 +131,10 @@
                 </a>`
             </div>
             <div class="inweui_tabbar">
-                <p class="keynote_1">直销商城的省级服务商必须是汇盟通宝区县服务中心</p>
+                <p class="keynote_1">保险超市的省级服务商必须是汇盟通宝区县服务中心</p>
                 <div class="keynote_2">
-                	<p>前<span class="biandong">32</span>名可成为直销商城股东代表</p>
-                    <p>配送直销商城事业部0.5%股权</p>
+                	<p>前<span class="biandong">32</span>名可成为保险超市股东代表</p>
+                    <p>配送保险超市事业部0.5%股权</p>
                 </div>
                 <div class="payment">代理费<span class="fee">99000</span>元</div>
                 <a>
@@ -114,10 +142,10 @@
                 </a>
             </div>
             <div class="inweui_tabbar">
-                <p class="keynote_1">直销商城的全国服务商必须是汇盟通宝市级运营中心</p>
+                <p class="keynote_1">保险超市的全国服务商必须是汇盟通宝市级运营中心</p>
                 <div class="keynote_2">
-                	<p>前<span class="biandong">8</span>名可成为直销商城董事或监事参与管理</p>
-                    <p>配送直销商城事业部2%股权</p>
+                	<p>前<span class="biandong">8</span>名可成为保险超市董事或监事参与管理</p>
+                    <p>配送保险超市事业部2%股权</p>
                 </div>
                 <div class="payment">代理费<span class="fee">396000</span>元</div>
                 <a>
@@ -153,4 +181,7 @@
             });
         });
     </script>
-</block>
+
+    </div>
+</body>
+</html>

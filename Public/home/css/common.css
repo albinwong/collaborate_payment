@@ -1,5 +1,5 @@
 * {
-	-webkit-user-select: none;
+	/*-webkit-user-select: none;*//*ios不兼容*/
 	-ms-touch-select: none;
 /*
 	-ms-touch-action: none;

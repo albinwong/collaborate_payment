@@ -4,15 +4,19 @@
 /*pay*/
 .pay{ width:90%; padding:0px 5%; text-align:center; font-size:1.2rem; margin:26px auto;}
 .pay span{ font-size:1.5rem; color:#c90909;}
+.pay p{ width:100%;}
+.inpay_1{ font-size:0.9rem; color:#e5b700;}
 .weui_cell_bd img{ width:100px; height:38px; margin-top:3px;}
 .add{ background:#c90909; width:88%; margin:0px 6%;}
 .add input{ background:#c90909; border:none; font-size:1.2rem; color:#FFF;}
+.dlqy{ width:43%; height:22px; overflow:hidden;}
 /*pay end*/
 
 /*pay2*/
 .xzpp{ width:90%; line-height:30px; margin:18px 5%; font-size:0.9rem;}
 .xzpp select{ width:38%; height:30px; overflow:hidden; background:#55a276; color:#FFF;}
 .xzqy{ width:90%; margin:10px 5%; font-size:0.9rem; line-height:30px;}
+.xzpp input{ background:#55a276; width:60%;}
 .xzqy select{background:#55a276; height:30px; overflow:hidden; color:#FFF;text-align:center;}
 .select-sheng{ width:29%;}
 .select-shi{ width:20%;}
@@ -39,6 +43,7 @@
 .choose{ width:90%; margin:10px 5%; font-size:0.8rem; line-height:30px; height:30px;}
 .choose p{ float:left;}
 .weui_btn{ background:#c90909; width:86%; margin:38px 7%;}
+.queren{ background:#c90909; width:15%; font-size:0.9rem; color:#FFF; text-align:center;}
 /*pay2 end*/
 
 .payend{ width:60%; margin:28px 20%;}

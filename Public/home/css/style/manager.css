@@ -7,7 +7,7 @@
 .weui_bar_item_on{ background-color:#ffffff; color:#55a276;}
 .inweui_tab_bd{ width:90%; margin:0px 5%; font-size:0.8rem;}
 .inweui_tab_bd p{ margin-top:8px;}
-.weui_tabbar{ width:94%; padding:10px 3%; padding-bottom:50px; background:#55a276; font-size:1.0rem;}
+.weui_tabbar{ width:94%; padding:10px 3%; padding-bottom:50px; background:#55a276; font-size:0.8rem;}
 form .weui_tabbar{position:fixed;bottom: 0px;}
 .inweui_tabbar{ width:100%;}
 .yhj{ width:100%; height:20px; line-height:20px; margin:3px auto; color:#FFF; text-align:left;}
@@ -24,6 +24,15 @@ form .weui_tabbar{position:fixed;bottom: 0px;}
 .keynote_2{ width:100%; text-align:center; margin:12px auto; color:#FFF;}
 .payment{ width:50%; color:#FFF; position:absolute; line-height:36px; left:10%; bottom:12px;}
 /*manager2 end*/
+
+/*manager3*/
+.tbc_1{ color:#c90909; margin:12px auto; font-size:1.1rem;}
+.inweui_tab_bd p span{ color:#c90909;}
+.keynote_pic{ position:absolute; width:26%; left:2%; bottom:10px;}
+.keynote_pic img{ width:100%; max-height:201px; max-width:201px;}
+.keynote_3{ position:absolute; width:70%; left:29%; bottom:10px;}
+.tbc_2{ width:10%; margin:0px 5%; float:left; text-align:center; line-height:18px; color:#FFF;}
+/*manager3 end*/
 
 /*manager5*/
 .busniess_name{ width:100%; margin-top:18px;}

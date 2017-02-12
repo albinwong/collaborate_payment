@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>合作缴费</title>
+<title>汇盟通宝</title>
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
 <link href="/work/pay_center/Public/home/css/layer.css" type="text/css" rel="stylesheet">
 <link href="/work/pay_center/Public/home/css/order.css" type="text/css" rel="stylesheet">
@@ -25,21 +25,34 @@
             <div class="shuaxin" onclick="window.history.go(0)">
                 <img class="icon-rotate fa fa-rotate-left" src="/work/pay_center/Public/home/img/new.png"/>
             </div>
-            <div class="login-title">直销商城<span>（服务商）</span></div>
+            <div class="login-title">汇盟通宝</div>
         </header>
     
     <div class="weui_tab">
         
 <link href="/work/pay_center/Public/home/css/style/manager.css" type="text/css" rel="stylesheet">
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".inweui_tab_bd").eq(0).show().siblings().hide();
+	$(".inweui_tabbar").eq(0).show().siblings().hide();
+    $(".weui_navbar_item").click(function(){
+		var i=$(this).index();
+		$(".weui_navbar_item").eq(i).addClass("weui_bar_item_on").siblings().removeClass("weui_bar_item_on");
+		$(".inweui_tab_bd").eq(i).show().siblings().hide();
+		$(".inweui_tabbar").eq(i).show().siblings().hide();
+		});
+});
+</script>
     <div class="weui_navbar" style="position:fixed; top:60px;">
-        <div class="weui_navbar_item weui_bar_item_on">区县</div>
-        <div class="weui_navbar_item">市级</div>
-        <div class="weui_navbar_item">省级</div>
-        <div class="weui_navbar_item">全国</div>
+        <div class="weui_navbar_item weui_bar_item_on">代理商</div>
+        <div class="weui_navbar_item">合伙人</div>
+        <div class="weui_navbar_item">服务中心</div>
+        <div class="weui_navbar_item">运营中心</div>
     </div>
     <div class="weui_tab_bd" style="margin-top:60px; margin-bottom:180px;">
-    	<div class="inweui_tab_bd" style="margin-top:15px;height:900px;">
+    	<div class="inweui_tab_bd" style="margin-top:15px; height:750px;">
                 <p style="color:#c90909;">1.保证金返还：推荐有效联盟商家，每个返还198元，限25个</p>
+                    <p>2.配送4950元通宝币TBC（可消费，可投资，可创业，可养老）</p>
                     <p>3.直接招商现金奖励:代理商20%（990元），合伙人16%（3960元），服务中心12%（1.188万元），运营中心8%（3.168万）</p>
                     <p>4.间接招商现金奖励:代理商 5%（247.5元），合伙人4%（990元），服务中心3%（2970元），运营中心2%（7920元）</p>
                     <p>5.直接和间接招商；都同时享有和现金奖励同等金额的通宝币TBC</p>
@@ -78,7 +91,7 @@
                 <li>参与公司决策，并享有市级运营中心2%分红股权</li>
             </ul>
         </div>
-        <div class="inweui_tab_bd" style="height:900px;">
+        <div class="inweui_tab_bd">
         	<h3>市级运营中心</h3>
             <ul>
             	<li>收益：区域内联盟商家折扣的10%</li>
@@ -113,33 +126,38 @@
     </div>
 
         
-    <form action="/work/pay_center/index.php/Home/Direct/check" method="post">
+    <form action="/work/pay_center/index.php/Home/Main/check" method="post">
         <div class="weui_tabbar">
         	<div class="inweui_tabbar">
+                <div class="keynote_1">配送4950元通宝币TBC</div>
                 <div class="keynote_2">
-                	<p>每个区域每个品牌限<span class="biandong">3</span>名服务商</p>
+                	<p>通宝币可购买服务中心和运营中心代理权</p>
+                	<p>通宝币可购买省级公司分红股权，坐拥财富</p>
+                    <p>通宝币可在直销商城，保险超市，通宝商城消费</p>
                 </div>
-                <div class="payment">代理费<span class="fee">4950</span>元</div>
+                <div class="payment">保证金<span class="fee">4950</span>元</div>
                 <a>
                     <input type="submit" class="weui_btn weui_btn_primary" value="点击缴费" style="background:#c90909; width:100%;"/>
                 </a>
             </div>
             <div class="inweui_tabbar">
-                <p class="keynote_1">直销商城的市级服务商必须是汇盟通宝的合伙人</p>
-            	<div class="keynote_2">
-                	<p>前<span class="biandong">160</span>名可成为直销商城股东</p>
-                    <p>配送直销商城事业部0.1%股权</p>
+                <div class="keynote_1">配送9900元通宝币TBC</div>
+                <div class="keynote_2">
+                	<p>通宝币可购买服务中心和运营中心代理权</p>
+                    <p>通宝币可购买省级公司分红股权，坐拥财富</p>
+                    <p>通宝币可在直销商城，保险超市，通宝商城消费</p>
                 </div>
-                <div class="payment">代理费<span class="fee">24750</span>元</div>
+                <div class="payment">保证金<span class="fee">24750</span>元</div>
                 <a>
                     <input type="submit" class="weui_btn weui_btn_primary" value="点击缴费" style="background:#c90909; width:100%;"/>
-                </a>`
+                </a>
             </div>
             <div class="inweui_tabbar">
-                <p class="keynote_1">直销商城的省级服务商必须是汇盟通宝区县服务中心</p>
+                <div class="keynote_1">前<span class="biandong">32</span>名配送99000万元通宝币TBC</div>
                 <div class="keynote_2">
-                	<p>前<span class="biandong">32</span>名可成为直销商城股东代表</p>
-                    <p>配送直销商城事业部0.5%股权</p>
+                	<p>通宝币可购买服务中心和运营中心代理权</p>
+                    <p>通宝币可购买省级公司分红股权，坐拥财富</p>
+                    <p>通宝币可在直销商城，保险超市，通宝商城消费</p>
                 </div>
                 <div class="payment">代理费<span class="fee">99000</span>元</div>
                 <a>
@@ -147,10 +165,10 @@
                 </a>
             </div>
             <div class="inweui_tabbar">
-                <p class="keynote_1">直销商城的全国服务商必须是汇盟通宝市级运营中心</p>
+                <div class="keynote_1">前<span class="biandong">8</span>名配送396000万元通宝币TBC</div>
                 <div class="keynote_2">
-                	<p>前<span class="biandong">8</span>名可成为直销商城董事或监事参与管理</p>
-                    <p>配送直销商城事业部2%股权</p>
+                	<p>通宝币可购买服务中心和运营中心代理权</p>
+                    <p>通宝币可购买省级公司分红股权，坐拥财富</p>
                 </div>
                 <div class="payment">代理费<span class="fee">396000</span>元</div>
                 <a>
@@ -158,13 +176,13 @@
                 </a>
             </div>
         </div>
-        <input type="hidden" name="type" value="zxsc">
+        <input type="hidden" name="type" value="hmtb">
         <input type="hidden" name="identify">
         <input type="hidden" name="figure">
     </form>
     <script type="text/javascript">
+        var amount = 0;
         $(function(){
-            var amount = 0;
             amount =$('.fee').eq(0).text();
             $('input[name=figure]').val(amount);
             $('input[name=identify]').val(1);
@@ -174,15 +192,6 @@
                 amount = $('input[type=submit]').eq(i).parents('.inweui_tabbar').find('.fee').text();
                 $('input[name=figure]').val(amount);
                 $('input[name=identify]').val(id);
-            });
-
-            $(".inweui_tab_bd").eq(0).show().siblings().hide();
-            $(".inweui_tabbar").eq(0).show().siblings().hide();
-            $(".weui_navbar_item").click(function(){
-            var i=$(this).index();
-            $(".weui_navbar_item").eq(i).addClass("weui_bar_item_on").siblings().removeClass("weui_bar_item_on");
-            $(".inweui_tab_bd").eq(i).show().siblings().hide();
-            $(".inweui_tabbar").eq(i).show().siblings().hide();
             });
         });
     </script>
