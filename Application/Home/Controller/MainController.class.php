@@ -50,18 +50,19 @@ class MainController extends Controller {
                 $data[$k] = $v;
             }
             $data['pay_type'] = $_POST['pay_type'];
-            $data['user'] = 1;//用户的ID
             $data['status'] = 1;//未付款
             $data['oid'] = date('YmdHis').rand(1000,9999); 
             $order = M("agent_order");
             $res = $order->add($data);
+            $oid = $order->field('oid')->where('id',$res)->find();
+            $give['oid'] = $oid['oid'];
             if($res){
                 if($_POST['pay_type'] == '支付宝'){
-                    redirect(U('Home/Pay/alipay'), 1, '页面跳转中...');
+                    redirect(U('Home/Pay/doalipay?oid='.$give['oid']));
                 }else if($_POST['pay_type'] == '微信'){
-                    redirect(U('Home/Pay/weixin'), 1, '页面跳转中...');
+                    redirect(U('Home/Pay/weixin'));
                 }else{
-                    redirect(U('Home/Pay/transfer'), 1, '页面跳转中...');
+                    redirect(U('Home/Pay/transfer'));
                 }
             }
         }else{

@@ -19,14 +19,19 @@
 <body>
     
     <header>
-        <div class="pull-left" onclick="window.history.back()">
-        <img class="icon-rotate fa fa-rotate-left" src="/work/pay_center/Public/home/img/Arrow.png"/>
+        <div class="pull-left">
+        <img class="icon-rotate fa fa-rotate-left" onclick="back();" src="/work/pay_center/Public/home/img/Arrow.png"/>
         </div>
         <div class="shuaxin" onclick="window.history.go(0)">
             <img class="icon-rotate fa fa-rotate-left" src="/work/pay_center/Public/home/img/new.png"/>
         </div>
         <div class="login-title">合作缴费</div>
     </header>
+    <script type="text/javascript">
+        function back(){
+            window.location.href = "http://www.huimengtongbao.com:8081/hmtb/html/index/index.html";
+        }
+    </script>
 
     <div class="weui_tab">
         

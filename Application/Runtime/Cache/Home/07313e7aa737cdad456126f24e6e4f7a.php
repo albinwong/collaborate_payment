@@ -63,7 +63,7 @@
                 <div class="inquiry">
                 	<div class="quiry">
                     	<p class="quiry_1">查询</p>
-                    	<p class="quiry_2">该区域还有<span>3</span>名代理资格</p>
+                    	<p class="quiry_2">该区域还有<span id="me">3</span>名代理资格</p>
                     </div>
                     <table class="sheet">
                     	<tr>
@@ -72,12 +72,7 @@
                             <th class="sheet_3">姓名</th>
                             <th class="sheet_4">日期</th>
                         </tr>
-                        <tr>
-                        	<td>1</td>
-                            <td>第三打得过个</td>
-                            <td>搜狗的</td>
-                            <td>2017.07.28</td>
-                        </tr>
+                        <tr id="list"></tr>
                     </table>
                 </div>
                 <?php if($sf != 4): ?><div class="weui_cells weui_cells_radio">
@@ -134,12 +129,7 @@
                                     <th class="sheet_3">姓名</th>
                                     <th class="sheet_4">日期</th>
                                 </tr>
-                                <tr style="display: table-row;">
-                                    <td>1</td>
-                                    <td>第三打得过个</td>
-                                    <td>搜狗的</td>
-                                    <td>2017.07.28</td>
-                                </tr>
+                                <tr style="display: table-row;"></tr>
                             </tbody>
                         </table>
                     </div><?php endif; ?>
@@ -203,8 +193,9 @@
         var KQR = false;
         var HPROV = false;
         var HCITY = false;
+        var brand = 0
         $('#brand').change(function(){
-            var brand = $(this).val();
+            brand = $(this).val();
             if(brand){
                 BRAND = true;
             }else{
@@ -378,9 +369,35 @@
             HCITY = true;
             HPROV = true;
         }
+        // var syme  = $('#syme').text();
+        // var symeI = parseInt(syme);
+        // alert(typeof(symeI));
+        $(".quiry_1").click(function(){
+            if(brand == 1 && area == 3291){
+                $('#list').empty().append('<td>1</td><td>13450022499</td><td>李强</td><td>2017-02-13</td>');
+                // $('span #me').text('2');
+            }
+            if(brand == 2 && city == 267){
+                $('#list').empty().append('<td>1</td><td>13102351337</td><td>胡蔁蓉</td><td>2017-02-13</td>');
+                // $('span #me').text('2');
+            }
+            if(brand == 3 && city == 232){
+                $('#list').empty().append('<td>1</td><td>18125355008</td><td>丁丽君</td><td>2017-02-13</td>');
+                // $('span #me').text('2');
+            }
+        });
 
         //汇盟通宝选择代理区域 end
         $('form').submit(function(){
+            if(brand ==1 && area == 3291){
+                return false;
+            }
+            if(city == 267 && brand ==2){
+                return false;
+            }
+            if(city == 232 && brand ==3){
+                return false;
+            }
             if(!$('select[name=harea]').attr('key')){
             HAREA = true;
             }

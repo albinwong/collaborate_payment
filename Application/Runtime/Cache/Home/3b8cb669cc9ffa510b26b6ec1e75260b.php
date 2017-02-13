@@ -59,10 +59,10 @@
                                 <div style="display: none;" class="queren">待确认</div>
                             </label>
                         </div><?php endif; ?>
-                    <?php if($sf == 2): ?><div class="inquiry">
+                    <?php if($sf != 1): ?><div class="inquiry">
                             <div class="quiry">
-                                <p class="quiry_1">查询</p>
-                                <p class="quiry_2" style="display: block;">该区域还有<span>9</span>名代理资格</p>
+                                <p class="quiry_1" key="<?php echo ($sf); ?>">查询</p>
+                                <p class="quiry_2" style="display: none;">该区域还有<span>9</span>名代理资格</p>
                             </div>
                             <table class="sheet">
                                 <tbody>
@@ -72,11 +72,7 @@
                                         <th class="sheet_3">姓名</th>
                                         <th class="sheet_4">日期</th>
                                     </tr>
-                                    <tr style="display: table-row;">
-                                        <td>1</td>
-                                        <td>第三打得过个</td>
-                                        <td>搜狗的</td>
-                                        <td>2017.07.28</td>
+                                    <tr id="list" style="display: table-row;">
                                     </tr>
                                 </tbody>
                             </table>
@@ -140,6 +136,8 @@
             var city = 0;
             var CITY = false;
             var ZSZ = false;
+            var SC = true;
+            var YY = true;
             var service = $('select[name=area]').attr('flag');
             if($('.queren').text()){
                 var DLQ = false;
@@ -170,8 +168,21 @@
                     AREA = false; 
                 }
             });
+
+
             $('select[name=city]').change(function(){
                 city = $(this).val();
+                if(city == 267){
+                    $('.quiry_1').click(function(){
+                        var idf = $(this).attr('key')
+                         if(idf == 4){
+                            $('#list').empty().append('<td>1</td><td>13102351337</td><td>胡蔁蓉</td><td>2017-02-13</td>');
+                            YY = false;
+                        }else if(idf == 2){
+                            $('#list').empty().append('<td>1</td><td>13983702170</td><td>徐燕</td><td>2017-02-13</td>');
+                        }
+                    });
+                }
                 $('#sc').text($(this).find("option:selected").text());
                 $('#sa').empty();
                 $('.queren').css('display','block').text('待确认');
@@ -184,12 +195,26 @@
                 if(service){
                     AREA = false; 
                 }
+                var yy  = $('.quiry_1').attr('key');
+                if(yy == 4 && city == 267){
+                    YY = false;
+                }else{
+                    YY = true;
+                }
             });
             if(service){
                 var area = 0;
                 var AREA = false;
                 $('select[name=area]').change(function(){
                     area = $(this).val();
+                    if(city == 231){
+                        $('.quiry_1').click(function(){
+                            if($(this).attr("key") == 3){
+                                $('#list').empty().append('<td>1</td><td>15992767065</td><td>白红钊</td><td>2017-02-13</td>');
+                                SC = false;
+                            }
+                        });
+                    }
                     $('.queren').css('display','block').text('待确认');
                     DLQ = false;
                     $('#sa').text($(this).find("option:selected").text());
@@ -197,6 +222,15 @@
                         AREA = true;
                     }else{
                         AREA = false;
+                    }
+
+                    var sc  = $('.quiry_1').attr('key');
+                    // alert(sc);
+                    // alert(area);
+                    if(sc == 3 && area == 2136){
+                        SC = false;
+                    }else{
+                        SC = true;
                     }
                 });
             }
@@ -220,7 +254,7 @@
                     CITY = true;
                     DLQ = true;
                 };
-                if(PROV && CITY && AREA && DLQ && ZSZ){
+                if(PROV && CITY && AREA && DLQ && ZSZ && SC && YY){
                     return true;
                 }else{
                     return false;

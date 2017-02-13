@@ -153,12 +153,16 @@
                 </a>
             </div>
         </div>
-        <input type="hidden" name="type" value="zxsc">
+        <input type="hidden" name="type" value="bxcs">
         <input type="hidden" name="identify">
         <input type="hidden" name="figure">
+        <input type="hidden" name="addtime">
+        <input type="hidden" name="user">
     </form>
     <script type="text/javascript">
         $(function(){
+            $('input[name=addtime]').val(sessionStorage["creat_time"]);
+            $('input[name=user]').val(sessionStorage["username"]);
             var amount = 0;
             amount =$('.fee').eq(0).text();
             $('input[name=figure]').val(amount);

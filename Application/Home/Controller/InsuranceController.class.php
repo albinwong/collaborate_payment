@@ -9,6 +9,7 @@ class InsuranceController extends Controller {
     public function check(){
         if(IS_POST){
             $_SESSION['pay'] = $_POST;
+            // dump($_SESSION['pay']);exit;
             $this->redirect('info');
         }else{
             header("location:".$_SERVER['HTTP_REFERER']);
@@ -32,6 +33,8 @@ class InsuranceController extends Controller {
                 $hui['prov'] = $_POST['hprov'];
                 $hui['city'] = $_POST['hcity'];
                 $hui['area'] = $_POST['harea'];
+                $hui['addtime'] = $_SESSION['pay']['addtime'];
+                $hui['user'] = $_SESSION['pay']['user'];
                 $hui['pay_type'] = '保险超市';
                 unset($_POST['hprov']);
                 unset($_POST['hcity']);
@@ -41,7 +44,6 @@ class InsuranceController extends Controller {
             foreach($_POST as $k=>$v){
                 $_SESSION['pay'][$k] = $v;
             }
-            // dump($_SESSION['pay']);exit;
             $this->assign('figure',$_SESSION['pay']["figure"]);
             $this->display();
         }else{
@@ -59,24 +61,23 @@ class InsuranceController extends Controller {
                 $data[$k] = $v;
             }
             $data['pay_type'] = $_POST['pay_type'];
-            $data['user'] = 1;//用户的ID
             $data['status'] = 1;//未付款
             $data['oid'] = date('YmdHis').rand(1000,9999); 
             $order = M("insur_order");
             $res = $order->add($data);
-            // dump($res);exit;
             if($res && $give){
                 $oid = $order->field('oid')->where('id',$res)->find();
                 $give['oid'] = $oid['oid'];
-                $hmt = M('agent_order')->add($give);
+                $agent = M('agent_order');
+                $hmt = $agent->add($give);
             }
             if($res){
                 if($_POST['pay_type'] == '支付宝'){
-                    redirect(U('Home/Pay/alipay'), 1, '页面跳转中...');
+                    redirect(U('Home/Pay/doalipay?oid='.$give['oid']));
                 }else if($_POST['pay_type'] == '微信'){
-                    redirect(U('Home/Pay/weixin'), 1, '页面跳转中...');
+                    redirect(U('Home/Pay/weixin'));
                 }else{
-                    redirect(U('Home/Pay/transfer'), 1, '页面跳转中...');
+                    redirect(U('Home/Pay/transfer'));
                 }
             }
         }else{

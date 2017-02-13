@@ -28,7 +28,7 @@
 </header>
 <div class="weui_tab">
     <div class="weui_tab_bd" style="margin-top:60px; margin-bottom:80px;">
-        <div class="pay">付款金额:<span>2475</span>元</div>
+        <div class="pay">付款金额:<span>{$_SESSION['pay']['figure']}</span>元</div>
         <div class="weui_cell" style="font-size:0.8rem;">
             <div class="weui_cell_hd">
                 <img src="__PUBLIC__/home/img/pay/pay-5.png" alt="icon" style="width:20px;margin-right:5px;display:block">
@@ -60,7 +60,7 @@
             <p>*注：转账成功后请及时联系我司财务！</p>
             <a href="tel:4009906128" style="color:#55a276;">电话：4009906128</a>
         </div>
-        <a href="#" class="weui_btn weui_btn_primary" style="background:#c90909;">确认转账</a>
+        <a href="__MODULE__/index/index" class="weui_btn weui_btn_primary" style="background:#c90909;">确认转账</a>
     </div>
 </div>
 
