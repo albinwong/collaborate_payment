@@ -68,7 +68,7 @@
                         </div>
                     </label>
                 </div>
-            <form action="/work/pay_center/index.php/Home/Direct/addOrder" method="post">
+            <form action="/work/pay_center/index.php/Home/direct/addOrder" method="post">
                 <div class="btn-login" style="bottom:0px; width: 100%;">
                     <input class="add weui_btn weui_btn_primary" type="submit" value="确 认 付 款">
                 </div>

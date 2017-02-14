@@ -85,13 +85,12 @@ class PayController extends Controller {
          
         *******************************/
     function notifyurl(){
-                /*
-                同理去掉以下两句代码；
-                */ 
-                //require_once("alipay.config.php");
-                //require_once("lib/alipay_notify.class.php");
-                 
-                //这里还是通过C函数来读取配置项，赋值给$alipay_config
+        /*
+        同理去掉以下两句代码；
+        */ 
+        //require_once("alipay.config.php");
+        //require_once("lib/alipay_notify.class.php");
+        //这里还是通过C函数来读取配置项，赋值给$alipay_config
         $alipay_config=C('alipay_config');
         //计算得出通知验证结果
         $alipayNotify = new \AlipayNotify($alipay_config);
@@ -134,7 +133,7 @@ class PayController extends Controller {
         这里其实就是将return_url.php这个文件中的代码复制过来，进行处理； 
         */
     function returnurl(){
-                //头部的处理跟上面两个方法一样，这里不罗嗦了！
+      //头部的处理跟上面两个方法一样，这里不罗嗦了！
         $alipay_config=C('alipay_config');
         $alipayNotify = new \AlipayNotify($alipay_config);//计算得出通知验证结果
         $verify_result = $alipayNotify->verifyReturn();
@@ -183,7 +182,7 @@ class PayController extends Controller {
 
     public function transfer(){
 
-    	$this->display();
+      $this->display();
     }
 
     public function success(){

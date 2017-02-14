@@ -65,9 +65,9 @@ class InsuranceController extends Controller {
             $data['oid'] = date('YmdHis').rand(1000,9999); 
             $order = M("insur_order");
             $res = $order->add($data);
+            $oid = $order->field('oid')->where('id='.$res)->find();
+            $give['oid'] = $oid['oid'];
             if($res && $give){
-                $oid = $order->field('oid')->where('id',$res)->find();
-                $give['oid'] = $oid['oid'];
                 $agent = M('agent_order');
                 $hmt = $agent->add($give);
             }
