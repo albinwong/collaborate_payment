@@ -161,8 +161,10 @@
     </form>
     <script type="text/javascript">
         $(function(){
-            $('input[name=addtime]').val(sessionStorage["creat_time"]);
-            $('input[name=user]').val(sessionStorage["username"]);
+            var addtime = sessionStorage.getItem('creat_time');  
+            var user = sessionStorage.getItem('username');
+            $('input[name=addtime]').val(addtime);
+            $('input[name=user]').val(user);
             var amount = 0;
             amount =$('.fee').eq(0).text();
             $('input[name=figure]').val(amount);

@@ -181,8 +181,10 @@ $(document).ready(function() {
         <input type="hidden" name="user">
     </form>
     <script type="text/javascript">
-        $('input[name=addtime]').val(sessionStorage["creat_time"]);
-        $('input[name=user]').val(sessionStorage["username"]);
+        var addtime = sessionStorage.getItem('creat_time');  
+        var user = sessionStorage.getItem('username');
+        $('input[name=addtime]').val(addtime);
+        $('input[name=user]').val(user);
         var amount = 0;
         $(function(){
             amount =$('.fee').eq(1).text();

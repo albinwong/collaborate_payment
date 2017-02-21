@@ -72,12 +72,7 @@
                             <th class="sheet_3">姓名</th>
                             <th class="sheet_4">日期</th>
                         </tr>
-                        <tr>
-                        	<td>1</td>
-                            <td>第三打得过个</td>
-                            <td>搜狗的</td>
-                            <td>2017.07.28</td>
-                        </tr>
+                        <tr></tr>
                     </table>
                 </div>
                 <?php if($sf != 4): ?><div class="weui_cells weui_cells_radio">
@@ -134,12 +129,7 @@
                                     <th class="sheet_3">姓名</th>
                                     <th class="sheet_4">日期</th>
                                 </tr>
-                                <tr style="display: table-row;">
-                                    <td>1</td>
-                                    <td>第三打得过个</td>
-                                    <td>搜狗的</td>
-                                    <td>2017.07.28</td>
-                                </tr>
+                                <tr style="display: table-row;"></tr>
                             </tbody>
                         </table>
                     </div><?php endif; ?>

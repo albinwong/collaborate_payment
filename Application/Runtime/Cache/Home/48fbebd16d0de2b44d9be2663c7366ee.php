@@ -57,8 +57,8 @@
             </div>
         </div>
         <div class="beizhu">
-            <p>*注：转账成功后请及时联系我司财务！</p>
-            <a href="tel:4009906128" style="color:#55a276;">电话：4009906128</a>
+            <p style="color:red;">*注：转账成功后请及时联系我司财务！</p>
+            <a href="tel:4009906128" style="color:red;">电话：4009906128</a>
         </div>
         <a href="/work/pay_center/index.php/Home/index/index" class="weui_btn weui_btn_primary" style="background:#c90909;">确认转账</a>
     </div>

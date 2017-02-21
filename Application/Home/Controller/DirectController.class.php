@@ -7,6 +7,7 @@ class DirectController extends Controller {
     }
 
     public function check(){
+        dump($_POST);exit;
         if(IS_POST){
             $_SESSION['pay'] = $_POST;
             $this->redirect('info');

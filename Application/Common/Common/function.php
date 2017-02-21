@@ -1,4 +1,6 @@
 <?php 
+	//微信支付路径
+	define('WX_PATH',SITE_PATH.'wxpay/demo/');
 	function getCateName($id)
 	{
 		if($id == 0){

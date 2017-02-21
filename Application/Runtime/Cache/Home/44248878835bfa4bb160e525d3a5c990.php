@@ -156,13 +156,31 @@
         <input type="hidden" name="type" value="zxsc">
         <input type="hidden" name="identify">
         <input type="hidden" name="figure">
-        <input type="hidden" name="addtime">
-        <input type="hidden" name="user">
+        <input type="hidden" name="user" value="">
     </form>
     <script type="text/javascript">
         $(function(){
-            $('input[name=addtime]').val(sessionStorage["creat_time"]);
-            $('input[name=user]').val(sessionStorage["username"]);
+            $('input[type=submit]').click(function(){
+                var user = prompt('请再次输入你的手机号码');
+                var reg = /^\d{11}$/;
+                if(reg.test(user)){
+                    if(confirm("请核对您的账户"+user)){
+                        $('input[name=user]').val(user);
+                        USER = true;
+                    }else{
+                        USER = false;
+                    }
+                }else{
+                    USER = false;
+                }
+            });
+            $('form').submit(function(){
+                if(USER){
+                    return true;
+                }else{
+                    return false;
+                }
+            });
             var amount = 0;
             amount =$('.fee').eq(0).text();
             $('input[name=figure]').val(amount);

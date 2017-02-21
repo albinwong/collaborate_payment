@@ -179,14 +179,33 @@ $(document).ready(function() {
         <input type="hidden" name="type" value="hmtb">
         <input type="hidden" name="identify">
         <input type="hidden" name="figure">
-        <input type="hidden" name="addtime">
-        <input type="hidden" name="user">
+        <input type="hidden" name="user" value="">
     </form>
     <script type="text/javascript">
-        $('input[name=addtime]').val(sessionStorage["creat_time"]);
-        $('input[name=user]').val(sessionStorage["username"]);
-        var amount = 0;
         $(function(){
+            $('input[type=submit]').click(function(){
+                var user = prompt('请再次输入你的手机号码');
+                var reg = /^\d{11}$/;
+                if(reg.test(user)){
+                    if(confirm("请核对您的账户"+user)){
+                        $('input[name=user]').val(user);
+                        USER = true;
+                    }else{
+                        USER = false;
+                    }
+                }else{
+                    alert('您输入的手机有误!');
+                    USER = false;
+                }
+            });
+            $('form').submit(function(){
+                if(USER){
+                    return true;
+                }else{
+                    return false;
+                }
+            });
+            var amount = 0;
             amount =$('.fee').eq(0).text();
             $('input[name=figure]').val(amount);
             $('input[name=identify]').val(1);

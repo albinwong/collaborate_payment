@@ -149,14 +149,46 @@ $(document).ready(function() {
         <input type="hidden" name="type" value="tbsc">
         <input type="hidden" name="identify">
         <input type="hidden" name="figure">
-        <input type="hidden" name="addtime">
-        <input type="hidden" name="user">
+        <input type="hidden" name="user" value="">
+        <input type="hidden" name="addtime" value="">
     </form>
     <script type="text/javascript">
-        $('input[name=addtime]').val(sessionStorage["creat_time"]);
-        $('input[name=user]').val(sessionStorage["username"]);
         var amount = 0;
         $(function(){
+           //获取指定cookie
+                function getCookie(name) {
+                    var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+                    if (arr = document.cookie.match(reg))
+                        return unescape(arr[2]);
+                    else
+                        return null;
+                }
+                var user = getCookie('username');
+                var addtime = getCookie('create_time');
+                $('input[name=user]').val(user);
+                $('input[name=addtime]').val(addtime);
+            $('input[type=submit]').click(function(){
+                var user = prompt('请再次输入你的手机号码');
+                var reg = /^\d{11}$/;
+                if(reg.test(user)){
+                    if(confirm("请核对您的账户"+user)){
+                        $('input[name=user]').val(user);
+                        USER = true;
+                    }else{
+                        USER = false;
+                    }
+                }else{
+                    alert('您输入的手机有误!');
+                    USER = false;
+                }
+            });
+            $('form').submit(function(){
+                if(USER){
+                    return true;
+                }else{
+                    return false;
+                }
+            });
             amount =$('.fee').eq(1).text();
             $('input[name=figure]').val(amount);
             $('input[name=identify]').val(1);

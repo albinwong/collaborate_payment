@@ -128,13 +128,23 @@
         <input type="hidden" name="type" value="zxsc">
         <input type="hidden" name="identify">
         <input type="hidden" name="figure">
-        <input type="hidden" name="addtime">
-        <input type="hidden" name="user">
+        <input type="hidden" name="user" value="">
+        <input type="hidden" name="addtime" value="">
     </form>
     <script type="text/javascript">
-        $(function(){
-            $('input[name=addtime]').val(sessionStorage["creat_time"]);
-            $('input[name=user]').val(sessionStorage["username"]);
+    $(function(){
+       //获取指定cookie
+            function getCookie(name) {
+                var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+                if (arr = document.cookie.match(reg))
+                    return unescape(arr[2]);
+                else
+                    return null;
+            }
+            var user = getCookie('username');
+            var addtime = getCookie('create_time');
+            $('input[name=user]').val(user);
+            $('input[name=addtime]').val(addtime);
             var amount = 0;
             amount =$('.fee').eq(0).text();
             $('input[name=figure]').val(amount);

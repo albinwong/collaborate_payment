@@ -31,6 +31,7 @@
     <div class="weui_tab">
         
     <link href="/work/pay_center/Public/home/css/style/pay.css" type="text/css" rel="stylesheet">
+    <script src="/work/pay_center/Public/home/js/js/pay.js" type="text/javascript"></script>
     <div class="weui_tab" style="background:#FFF;">
         <div class="weui_tab_bd">
             <form action="/work/pay_center/index.php/Home/main/settlement" method="post">
@@ -93,15 +94,15 @@
     <script type="text/javascript">
     $(function(){
     //选择代理区域
-        // $('#prov').click(function(){
+        $('#prov').click(function(){
             $.get("/work/pay_center/index.php/Home/index/address",{'pid':0},function(data){
-                // 遍历数据进行添加
+                //遍历数据进行添加
                 for(var i=0;i<data.length;i++){
                 var op = $('<option value="'+data[i].areaid+'">'+data[i].areaname+'</option>');
                 $('#prov').append(op);
                 }
             },'json');
-        // });
+        });
         $('#prov').change(function(){
             // 获取当前省的id
             var pid = $(this).val();
